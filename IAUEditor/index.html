@@ -15,57 +15,56 @@
 
 <body>
     <div ng-app='IAUApp' ng-controller='IAUController'>
-        <h2>Prototype IAU Editor</h2>
-        <h3>
-        {{IAU.iau_name}}<br/>
-        ID: {{IAU.iau_id}}<br/>
-        Degree: {{IAU.iau_deg}}<br/>
-        Done By: {{IAU.iau_done_by}}<br/>
-        Chosen conf id: {{IAU.iau_chosen_conf_id}}
-      </h3>
-        <br/>
 
         <div class="container-fluid">
-            <div class="col-lg">
-                <div class="row">
-                    <div class="card bg-success text-white" ng-repeat="act in IAU.iau_actions">
-                        <div class="card-body">
-                            <p class="card-text"> Action ID: {{act.act_id}}</p>
-                            <p class="card-text"> Action Detail: {{act.act_detail}}</p>
-                            <p class="card-text"> Action Caution: {{act.act_caution}}</p>
-                            <p class="card-text"> Action Warning: {{act.act_warning}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <h2>Prototype IAU Editor</h2>
+          <h3>
+          {{IAU.iau_name}}<br/>
+          ID: {{IAU.iau_id}}<br/>
+          Degree: {{IAU.iau_deg}}<br/>
+          Done By: {{IAU.iau_done_by}}<br/>
+          Chosen conf id: {{IAU.iau_chosen_conf_id}}
+          </h3>
+          <br/>
+          <div class="col-lg">
+              <div class="row">
+                  <div class="card bg-success text-white" ng-repeat="act in IAU.iau_actions">
+                      <div class="card-body">
+                          <p class="card-text"> Action ID: {{act.act_id}}</p>
+                          <p class="card-text"> Action Detail: {{act.act_detail}}</p>
+                          <p class="card-text"> Action Caution: {{act.act_caution}}</p>
+                          <p class="card-text"> Action Warning: {{act.act_warning}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-            <div class="col-lg">
-                <div class="row">
-                    <div class="card bg-warning" ng-repeat="conf in IAU.iau_confs">
-                        <div class="card-body">
-                            <p class="card-text"> Confirmation ID: {{conf.conf_id}}</p>
-                            <p class="card-text"> Confirmation Content: {{conf.conf_content}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-lg">
+              <div class="row">
+                  <div class="card bg-warning" ng-repeat="conf in IAU.iau_confs">
+                      <div class="card-body">
+                          <p class="card-text"> Confirmation ID: {{conf.conf_id}}</p>
+                          <p class="card-text"> Confirmation Content: {{conf.conf_content}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-
-
-            <div class="col-lg">
-                <div class="row">
-                    <div class="card bg-primary text-white" ng-repeat="iu in IAU.iau_ius">
-                        <div class="card-body">
-                            <p class="card-text"> Information Unit ID: {{iu.iu_id}}</p>
-                            <p class="card-text"> Information Unit Link: {{iu.iu_link}}</p>
-                            <p class="card-text"> Information Unit Type: {{iu.iu_type}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div class="col-lg">
+              <div class="row">
+                  <div class="card bg-primary text-white" ng-repeat="iu in IAU.iau_ius">
+                      <div class="card-body">
+                          <p class="card-text"> Information Unit ID: {{iu.iu_id}}</p>
+                          <p class="card-text"> Information Unit Link: {{iu.iu_link}}</p>
+                          <p class="card-text"> Information Unit Type: {{iu.iu_type}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <button type="button" class="btn btn-primary">Do something sometime</button>
         </div>
 
-        <button type="button" class="btn btn-primary">Do something sometime</button>
+
     </div>
 </body>
 
