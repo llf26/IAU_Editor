@@ -1,8 +1,13 @@
 .card{width: 18rem; margin-bottom: 5px; margin-right: 5px;}
-img{ border: 1px solid #ddd;}
+.card-label{ font-weight: bold; font-size: 17px;}
+
+img{ border: 2px solid #FFF;}
 img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+.img-divider { background-color: #FFF; border-color: #FFF; width: inherit;}
+
 .jumbotron{margin-top: 10px;}
-.jumbo-label{margin-right: 40px;}
+.jumbo-iau-info{margin-right: 40px;}
+.jumbo-iau-info-label{ font-weight: bold;}
 
