@@ -1,6 +1,6 @@
 var app = angular.module('IAUApp',[]);
 
-app.controller('IAUController', function MainCtrl($scope, $http){
+app.controller('IAUController', function MainCtrl($scope, $http, $window){
   //fun stuuf here
   $scope.apiURL = "http://130.101.92.77/NasaSuits/api/eva/iau/GetIAU.php?iau_id=";
   var video_iu = {
@@ -29,6 +29,10 @@ app.controller('IAUController', function MainCtrl($scope, $http){
         console.log(error);
       });
   };
+
+  $scope.videoRedirect = function(url){
+    $window.open(url, '_blank');
+  }
 
   $scope.getIAU(1893);
 
