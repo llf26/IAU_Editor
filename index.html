@@ -24,10 +24,10 @@
                 <hr class="my-4">
                 <div class="row">
                         <h2 class="jumbo-iau-info">{{IAU.iau_name}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">ID: </span>{{IAU.iau_id}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Degree: </span>{{IAU.iau_deg}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Done By: </span>{{IAU.iau_done_by}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Chosen conf id: </span>{{IAU.iau_chosen_conf_id}}</h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">ID: </span>{{IAU.iau_id || 'None'}}</h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Degree: </span>{{IAU.iau_deg || 'None'}}</h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Done By: </span>{{IAU.iau_done_by || 'None'}}</h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Chosen conf id: </span>{{IAU.iau_chosen_conf_id || 'None'}}</h2>
                 </div>
             </div>  
 
@@ -62,8 +62,9 @@
                           <p class="card-text"> <span class="card-label">Information Unit ID: </span>{{iu.iu_id}}</p>
                           <p class="card-text"> <span class="card-label">Information Unit Link: </span>{{iu.iu_link}}</p>
                           <p class="card-text"> <span class="card-label">Information Unit Type: </span>{{iu.iu_type}}</p>
-                          <div class="text-right"><i class="fas fa-image" ng-click="iu.showImg = true;" ng-if="!iu.showImg"></i></div>
-                          <div class="text-right"><i class="fas fa-times" ng-click="iu.showImg = false;" ng-if="iu.showImg === true"></i></div>
+                          <div class="text-right"><i class="fas fa-image clickable" ng-click="iu.showImg = true;" ng-if="iu.iu_type === 'image' && !iu.showImg"></i></div>
+                          <div class="text-right"><i class="fas fa-times clickable" ng-click="iu.showImg = false;" ng-if="iu.iu_type === 'image' && iu.showImg === true"></i></div>
+                          <div class="text-right"><i class="fas fa-video clickable" ng-if="iu.iu_type === 'video'"></i></div>
                             <hr class="img-divider" ng-if="iu.iu_type === 'image' && iu.showImg === true" class="my-4">                           
                             <img ng-if="iu.iu_type === 'image' && iu.showImg === true" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Apollo_Moonwalk2.jpg/220px-Apollo_Moonwalk2.jpg" class="card-img-bottom rounded img-fluid" ng-click="iu.showImg = false;">
 
