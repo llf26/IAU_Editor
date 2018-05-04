@@ -22,8 +22,14 @@ app.controller('IAUController', function MainCtrl($scope, $http, $window){
         function success(result){
 
         $scope.IAU = result.data;
-        $scope.IAU.iau_ius.push(video_iu);
+        //$scope.IAU.iau_ius.push(video_iu);
         console.log($scope.IAU);
+        $scope.IAU.iau_ius.forEach(function(iu){
+          if(iu.iu_type === 'video')
+          {
+            iu.fileType = $scope.getFileType(iu.iu_link);
+          }
+        });
       },
        function failure(error){
         console.log(error);
@@ -34,6 +40,13 @@ app.controller('IAUController', function MainCtrl($scope, $http, $window){
     $window.open(url, '_blank');
   }
 
-  $scope.getIAU(1893);
+  $scope.getFileType = function(url){
+    var arr = url.split('.');
+    var fileType = 'video/' + arr[arr.length-1];
+    return fileType;
+  }
+
+  //$scope.getIAU(1893);
+  $scope.getIAU(1974);
 
 });
