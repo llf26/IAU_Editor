@@ -1,4 +1,8 @@
-var app = angular.module('IAUApp',[]);
+var app = angular.module('IAUApp',['xeditable']);
+
+app.run(['editableOptions', function(editableOptions) {
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+}]);
 
 app.controller('IAUController', function MainCtrl($scope, $http, $window){
   //fun stuuf here

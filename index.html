@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="/app/scripts/angular.js"></script>
+    <script src="/app/scripts/xeditable.js"></script>
     <script src="/app/scripts/controllers/IAUControl.js"></script>
 
     <link rel="stylesheet" href="/app/styles/bootstrap-4.0.0/dist/css/bootstrap.min.css"></link>
     <link rel="stylesheet" href="/app/styles/IAUControlStyle.css"></link>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app/styles/xeditable.css"></link>
 </head>
 
 <body>
@@ -57,11 +59,11 @@
 
           <div class="col-lg">
               <div class="row">
-                  <div class="card bg-primary text-white" ng-repeat="iu in IAU.iau_ius">
+                  <div class="card bg-light" ng-repeat="iu in IAU.iau_ius">
                       <div class="card-body">
                           <p class="card-text"> <span class="card-label">Information Unit ID: </span>{{iu.iu_id}}</p>
-                          <p class="card-text"> <span class="card-label">Information Unit Link: </span>{{iu.iu_link}}</p>
-                          <p class="card-text"> <span class="card-label">Information Unit Type: </span>{{iu.iu_type}}</p>
+                          <p class="card-text"> <span class="card-label">Information Unit Link: </span><span editable-text='iu.iu_link'>{{iu.iu_link}}</span></p>
+                          <p class="card-text"> <span class="card-label">Information Unit Type: </span><span editable-text='iu.iu_type'>{{iu.iu_type}}</span></p>
                           <div class="text-right"><i class="fas fa-image fa-lg clickable" ng-click="iu.showImg = true;" ng-if="iu.iu_type === 'image' && !iu.showImg"></i></div>
                           <div class="text-right"><i class="fas fa-times fa-lg clickable" ng-click="iu.showImg = false;" ng-if="iu.iu_type === 'image' && iu.showImg === true"></i></div>
                           <div class="text-right"><i class="fas fa-video fa-lg clickable" ng-click="iu.showVid = true;" ng-if="iu.iu_type === 'video' && !iu.showVid" ></i></div>
