@@ -26,9 +26,9 @@
                 <hr class="my-4">
                 <div class="row">
                         <h2 class="jumbo-iau-info">{{IAU.iau_name}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">ID: </span>{{IAU.iau_id || 'None'}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Degree: </span>{{IAU.iau_deg || 'None'}}</h2>
-                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Done By: </span>{{IAU.iau_done_by || 'None'}}</h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">ID: </span>{{IAU.iau_id || 'None'}}</span></h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Degree: </span><span editable-text='IAU.iau_deg'>{{IAU.iau_deg || 'None'}}</span></h2>
+                        <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Done By: </span><span editable-text='IAU.iau_done_by'>{{IAU.iau_done_by || 'None'}}</span></h2>
                         <h2 class="jumbo-iau-info"><span class="jumbo-iau-info-label">Chosen conf id: </span>{{IAU.iau_chosen_conf_id || 'None'}}</h2>
                 </div>
             </div>  

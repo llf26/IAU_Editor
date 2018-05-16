@@ -12,6 +12,7 @@
 
 .card{width: 18rem; margin-bottom: 5px; margin-right: 5px; height: 100%;}
 .card-label{ font-weight: bold; font-size: 17px;}
+.card-body .editable-buttons {position: relative; top: 10px;}
 
 img{ border: 2px solid rgb(0, 0, 0);}
 /* img:hover {
@@ -22,6 +23,7 @@ img{ border: 2px solid rgb(0, 0, 0);}
 .jumbotron{margin-top: 10px;}
 .jumbo-iau-info{margin-right: 40px;}
 .jumbo-iau-info-label{ font-weight: bold;}
+.jumbotron .editable-buttons {position: relative; bottom: 3px;}
 
 .clickable{ cursor: pointer;}
 
@@ -44,5 +46,6 @@ video{margin-top: -40px; margin-bottom: -50px;}
     -moz-osx-font-smoothing: grayscale;
 }
 
-.editable-buttons {position: relative; top: 10px;}
+
+
 

@@ -32,6 +32,11 @@ app.controller('IAUController', function MainCtrl($scope, $http, $window){
           if(iu.iu_type === 'video')
           {
             iu.fileType = $scope.getFileType(iu.iu_link);
+            iu.showVid = true;
+          }
+          if(iu.iu_type === 'image')
+          {
+            iu.showImg = true;
           }
         });
       },
@@ -51,6 +56,6 @@ app.controller('IAUController', function MainCtrl($scope, $http, $window){
   }
 
   //$scope.getIAU(1893);
-  $scope.getIAU(1974);
+  $scope.getIAU(1978);
 
 });
